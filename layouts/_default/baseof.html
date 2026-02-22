@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{ site.Language.Lang }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+
+    {{/* Favicon: if you keep a favicon in /static, this will work. */}}
+    <link rel="icon" href="{{ "favicon.svg" | relURL }}" />
+
+    {{/* GalleryDeluxe injects its CSS/JS via Hugo Pipes */}}
+    {{ partial "gallerydeluxe/head.html" . }}
+
+    {{/* Optional: allow pages to add extra head tags */}}
+    {{ block "head" . }}{{ end }}
+  </head>
+
+  <body class="page">
+    <header class="site-header">
+      <a class="logo" href="{{ site.Home.RelPermalink }}">
+        {{ partial "logo.html" . }}
+      </a>
+    </header>
+
+    <main class="site-main">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ block "footer" . }}{{ end }}
+  </body>
+</html>
