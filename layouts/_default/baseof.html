@@ -13,6 +13,8 @@
 
     {{/* Optional: allow pages to add extra head tags */}}
     {{ block "head" . }}{{ end }}
+
+    <link rel="stylesheet" href="{{ "site.css" | relURL }}">
   </head>
 
   <body class="page">
