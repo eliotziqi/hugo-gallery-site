@@ -25,7 +25,7 @@ Each image file placed in this directory will automatically be picked up by the 
 2. Run the development server:
 
 ```bash
-hugo server
+hugo server -D -b http://localhost:1313/
 ```
 
 3. The gallery will update automatically.
