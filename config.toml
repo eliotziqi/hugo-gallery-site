@@ -1,4 +1,4 @@
-baseURL      = "https://www.example.com/"
+baseURL      = "https://eliotziqi.github.io/hugo-gallery-site/"
 title        = "Gallery"
 disableKinds = ["section", "taxonomy", "term"]
 
